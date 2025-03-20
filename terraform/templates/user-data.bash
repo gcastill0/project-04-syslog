@@ -16,9 +16,11 @@ install_syslog_ng_ubuntu() {
 
     # Install OpenJDK
     sudo apt update
-    sudo apt install openjdk-17-jdk -y
-    sudo ln -s /usr/lib/jvm/java-17-openjdk-amd64/lib/server/libjvm.so /usr/lib/libjvm.so
-    echo 'export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/lib/jvm/java-17-openjdk-amd64/lib/server' | sudo tee -a /etc/profile
+    sudo apt install openjdk-21-jdk -y
+    sudo ln -s /usr/lib/jvm/java-21-openjdk-amd64/lib/server/libjvm.so /usr/lib/libjvm.so
+    echo 'export JAVA_HOME=/usr/lib/jvm/java-21-openjdk-amd64' | sudo tee -a /etc/profile
+    echo 'PATH=$JAVA_HOME/bin:$PATH' | sudo tee -a /etc/profile
+    echo 'export LD_LIBRARY_PATH=$JAVA_HOME/lib/server' | sudo tee -a /etc/profile
     source /etc/profile
 
     # Enable and start the syslog-ng service
