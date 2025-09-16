@@ -22,7 +22,7 @@ sudo systemctl daemon-reload
 sudo systemctl enable syslog-ng
 sudo systemctl start syslog-ng
 ```
-## Troubleshooting
+# Troubleshooting
 Here are some of the key commands and methods for troubleshooting `syslog-ng`:
 
 | **Command**                                    | **Description**                                                                                                      |
