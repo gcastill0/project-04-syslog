@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="30">
+    <g fill="#3697FC" fill-rule="nonzero">
+        <path d="M0 5h1000v20H0z" opacity=".2" />
+        <path d="M75 5h850v20H75z" opacity=".25" />
+        <path d="M150 5h700v20H150z" opacity=".3" />
+        <path d="M225 5h550v20H225z" opacity=".35" />
+        <path d="M300 5h400v20H300z" opacity=".4" />
+        <path d="M375 5h250v20H375z" opacity=".45" />
+        <path d="M450 5h100v20H450z" />
+    </g>
+</svg>
