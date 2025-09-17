@@ -1,15 +1,1 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg width="1000px" height="30px" viewBox="0 0 1000 30" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <title>gradient-fade-center-steps</title>
-    <g id="gradient-fade-center-steps" stroke="none" fill="none" fill-rule="evenodd" stroke-width="1">
-        <g id="Group" fill="#3697FC">
-            <polygon id="Path" fill-rule="nonzero" opacity="0.2" points="0 0 1000 0 1000 20 0 20"></polygon>
-            <polygon id="Path" fill-rule="nonzero" opacity="0.25" points="75 0 925 0 925 20 75 20"></polygon>
-            <polygon id="Path" fill-rule="nonzero" opacity="0.3" points="150 0 850 0 850 20 150 20"></polygon>
-            <polygon id="Path" fill-rule="nonzero" opacity="0.35" points="225 0 775 0 775 20 225 20"></polygon>
-            <polygon id="Path" fill-rule="nonzero" opacity="0.4" points="300 0 700 0 700 20 300 20"></polygon>
-            <polygon id="Path" fill-rule="nonzero" opacity="0.45" points="375 0 625 0 625 20 375 20"></polygon>
-            <polygon id="Path" fill-rule="nonzero" points="450 0 550 0 550 20 450 20"></polygon>
-        </g>
-    </g>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="30"><g fill="#3697FC" fill-rule="nonzero"><path d="M0 0h1000v20H0z" opacity=".2"/><path d="M75 0h850v20H75z" opacity=".25"/><path d="M150 0h700v20H150z" opacity=".3"/><path d="M225 0h550v20H225z" opacity=".35"/><path d="M300 0h400v20H300z" opacity=".4"/><path d="M375 0h250v20H375z" opacity=".45"/><path d="M450 0h100v20H450z"/></g></svg>
