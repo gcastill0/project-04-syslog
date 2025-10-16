@@ -33,7 +33,7 @@ Modules needed:
 
 ### 3. Configuration Requirements
 
-In `/etc/rsyslog.conf` or under `/etc/rsyslog.d/`:
+In `/etc/rsyslog.d/sentinelone.conf`:
 
 **Input (UDP):**
 
@@ -78,7 +78,7 @@ rsyslogd -N1
 systemctl enable --now rsyslog
 ```
 
-Check logs in `/var/log/messages` for connectivity or module errors.
+Check logs in `/var/log/messages` and `/tmp/rsyslog.err` for connectivity or module errors.
 
 ---
 
