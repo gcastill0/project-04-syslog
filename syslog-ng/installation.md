@@ -56,3 +56,61 @@ sudo systemctl daemon-reload
 sudo systemctl enable syslog-ng
 sudo systemctl start syslog-ng
 ```
+
+## Install syslog-ng on SUSE Linux Enterprise Server (SLES)
+
+---
+
+### Verify System and Update Packages
+
+```bash
+sudo zypper refresh
+sudo zypper update
+```
+
+Ensure you have SLES 12 SP5 or newer (SLES 15 recommended).
+
+---
+
+### Enable Required Repositories
+
+Check if the logging package repository is available:
+
+```bash
+sudo zypper search syslog-ng
+```
+
+If not found, add the SUSE PackageHub or openSUSE repo:
+
+```bash
+sudo SUSEConnect -p PackageHub/15.5/x86_64
+```
+
+*(Adjust version as needed.)*
+
+---
+
+### Install syslog-ng and Modules
+
+```bash
+sudo zypper install syslog-ng syslog-ng-core \
+  syslog-ng-json syslog-ng-http syslog-ng-python
+```
+
+Modules used:
+
+* **syslog-ng-core** – main daemon.
+* **syslog-ng-json** – JSON formatting support.
+* **syslog-ng-http** – enables HTTP/HTTPS forwarding.
+* **syslog-ng-python** – optional for custom filters.
+
+---
+
+### Enable and Start Service
+
+```bash
+sudo systemctl enable syslog-ng
+sudo systemctl start syslog-ng
+sudo systemctl status syslog-ng
+```
+
