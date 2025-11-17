@@ -7,7 +7,7 @@ counter=1
 thread=$((RANDOM % 1024 + 1))
 
 # Define the destination (localhost in this case, change as needed)
-destination="localhost"
+destination="127.0.0.1"
 port="514"
 
 # Loop to send 5 messages
