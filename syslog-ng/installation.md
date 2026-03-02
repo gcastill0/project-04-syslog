@@ -57,6 +57,50 @@ sudo systemctl enable syslog-ng
 sudo systemctl start syslog-ng
 ```
 
+## Install or Upgrade on Ubuntu 24.04 - Noble
+
+### Add the syslog-ng OSE signing key (modern method)
+
+```bash
+sudo install -d -m 0755 /etc/apt/keyrings
+
+curl -fsSL https://ose-repo.syslog-ng.com/apt/syslog-ng-ose-pub.asc \
+  | sudo gpg --dearmor -o /etc/apt/keyrings/syslog-ng-ose.gpg
+```
+
+### Add the syslog-ng OSE APT repository
+
+```bash
+echo "deb [signed-by=/etc/apt/keyrings/syslog-ng-ose.gpg] https://ose-repo.syslog-ng.com/apt/ stable ubuntu-noble" \
+| sudo tee /etc/apt/sources.list.d/syslog-ng-ose.list
+```
+
+### Update package index and confirm candidate version
+
+```bash
+sudo apt update
+apt-cache policy syslog-ng | sed -n '1,30p'
+```
+
+### Install or Upgrade the syslog-ng and HTTP modules
+
+```bash
+sudo apt install -y syslog-ng syslog-ng-mod-http
+```
+
+or, force an upgrade explicitly:
+
+```bash
+sudo apt install -y --only-upgrade syslog-ng syslog-ng-mod-http
+```
+
+### Validate and restart
+
+```bash
+sudo syslog-ng -s
+sudo systemctl restart syslog-ng
+```
+
 ## Install syslog-ng on SUSE Linux Enterprise Server (SLES)
 
 ---
