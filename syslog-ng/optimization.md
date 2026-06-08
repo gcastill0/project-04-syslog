@@ -165,8 +165,7 @@ parameters are guaranteed to be available on any valid Docker host.
 
 ## Important Notes
 
-- These settings apply **globally** to the host — not just to the Docker container
-  or syslog service. All UDP traffic on the host benefits from the larger buffers.
+- These settings apply **globally** to the host. All UDP traffic on the host benefits from the larger buffers.
 - If the host also runs a local syslog daemon (e.g. `rsyslog` for OS logging), it
   will benefit from these settings too — this is harmless.
 - UDP has **no flow control**. If the receive buffer fills before the kernel can
