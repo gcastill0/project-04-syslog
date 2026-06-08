@@ -3,7 +3,7 @@
 ## Overview
 
 These settings are **host-level Linux kernel network parameters**. They apply globally
-to all UDP socket traffic on the host — they are not specific to any syslog service,
+to all UDP socket traffic on the host, and they are not specific to any syslog service,
 port, or application. Any process opening a UDP socket benefits from these settings,
 including the Docker bridge network stack receiving traffic on port 514.
 
