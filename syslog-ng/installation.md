@@ -103,7 +103,42 @@ sudo systemctl restart syslog-ng
 
 ## Install or Upgrade on Ubuntu 26.04 - Resolute
 
-### Add the syslog-ng OSE signing key
+> **Note:** Ubuntu 26.04 also ships `syslog-ng-mod-http` (version 4.8.1) in the `universe` archive. The OSE repo provides a newer version.
+
+No third-party repository. Version 4.8.1 from the `universe` component.
+
+### Enable universe
+
+```
+sudo add-apt-repository -y universe
+```
+
+### Update package index and confirm candidate version
+
+```
+sudo apt update
+apt-cache policy syslog-ng-core syslog-ng-mod-http
+```
+
+### Install syslog-ng and the HTTP module
+
+```
+sudo apt install -y syslog-ng-core syslog-ng-scl syslog-ng-mod-http
+```
+
+Installing syslog-ng removes rsyslog.
+
+### Enable, validate, and restart
+
+```
+sudo systemctl enable syslog-ng
+sudo syslog-ng -s
+sudo systemctl restart syslog-ng
+```
+
+---
+
+### Add the syslog-ng OSE signing key (alternative)
 
 ```
 sudo install -d -m 0755 /etc/apt/keyrings
@@ -144,8 +179,6 @@ Installing syslog-ng removes rsyslog.
 sudo syslog-ng -s
 sudo systemctl restart syslog-ng
 ```
-
-> **Note:** Ubuntu 26.04 also ships `syslog-ng-mod-http` (version 4.8.1) in the `universe` archive. The OSE repo provides a newer version.
 
 
 ## Install syslog-ng on SUSE Linux Enterprise Server (SLES)
