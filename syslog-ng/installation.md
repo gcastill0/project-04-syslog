@@ -138,6 +138,8 @@ sudo systemctl restart syslog-ng
 
 ---
 
+On Ubuntu 24.04, the stock syslog-ng package did not include syslog-ng-mod-http, so customers needed the OSE repository to get HTTP forwarding. On 26.04 that gap is closed: the Ubuntu archive ships syslog-ng-mod-http, so OSE is no longer required. OSE remains an option for customers who want a newer version (4.12.0 versus the archive’s 4.8.1), the same syslog-ng version across mixed Ubuntu releases, or faster access to upstream fixes. The tradeoff is an extra third-party repository and signing key on every host, no Canonical support, and a dependency on the OSE server during installs and updates. For HTTP forwarding alone, the archive packages are the simpler default. Use OSE only when a customer needs a feature or fix that 4.8.1 does not have.
+
 ### Add the syslog-ng OSE signing key (alternative)
 
 ```
